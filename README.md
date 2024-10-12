@@ -1,4 +1,4 @@
-## 8. ⚙️ Initialization Process
+## ⚙️ Initialization Process
 
 To get started with the project on your local machine, follow these steps:
 
