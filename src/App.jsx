@@ -6,7 +6,8 @@ import Profile from "./pages/Profile";
 function App() {
   return (
     <>
-      <Home />
+      {/* <Home /> */}
+      <Events></Events>
     </>
   );
 }

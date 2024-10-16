@@ -2,7 +2,7 @@ import Container from "../UI/Container";
 import GridLayout from "../UI/GridLayout";
 import Navbar from "../components/Navbar";
 import EventCard from "../components/EventCard.jsx";
-import Button from "@mui/material/Button";
+
 
 const Home = (props) => {
   let cardImgArry = [
@@ -17,10 +17,7 @@ const Home = (props) => {
     <GridLayout>
       <Navbar />
       <Container styleStringInTailwind={"overflow-hidden"}>
-        <div className="titleAndBtn flex flex-row justify-between mb-7 ">
-          <h1 className="text-2xl inline-block font-semibold">Home</h1>
-          <Button variant="contained">Contained</Button>
-        </div>
+        <PageTitleAndBtn title={"Home"} />
         <div className="eventCardsContainer flex flex-row overflow-scroll max-w-[97%] flex-nowrap gap-5 py-4 no-scrollbar bg-slate-50">
           {cardImgArry.map((imgURL, index) => {
             return <EventCard key={index} imgURL={imgURL} />;
