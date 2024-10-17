@@ -1,30 +1,25 @@
 import HomeIcon from "@mui/icons-material/Home";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import CampaignIcon from "@mui/icons-material/Campaign";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="flex flex-col bg-gray-300 items-center p-3 justify-around text-sm">
+    <div className="fixed flex flex-col justify-around items-center bg-gray-300 p-3 min-h-screen text-sm">
       <div>
-        <button type="button">
+        <Link to="/">
           <HomeIcon sx={{ fontSize: "2rem" }} />
-        </button>
+        </Link>
       </div>
       <div>
-        <button type="button">
+        <Link to="/events">
           <CalendarMonthIcon sx={{ fontSize: "2rem" }} />
-        </button>
+        </Link>
       </div>
       <div>
-        <button type="button">
+        <Link to="/announcements">
           <CampaignIcon sx={{ fontSize: "2rem" }} />
-        </button>
-      </div>
-      <div>
-        <button type="button">
-          <AccountCircleIcon sx={{ fontSize: "2rem" }} />
-        </button>
+        </Link>
       </div>
     </div>
   );
