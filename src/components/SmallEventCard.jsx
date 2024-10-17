@@ -4,6 +4,7 @@ import Card from "@mui/joy/Card";
 import CardContent from "@mui/joy/CardContent";
 import CardOverflow from "@mui/joy/CardOverflow";
 import Typography from "@mui/joy/Typography";
+import "@fontsource/inter";
 
 export default function SmallEventCard() {
   return (

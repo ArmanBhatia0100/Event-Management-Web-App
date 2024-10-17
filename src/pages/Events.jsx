@@ -11,11 +11,14 @@ const Events = (props) => {
         <Navbar />
         <Container>
           <PageTitleAndBtn title={"Events"} />
-          <div className="max-w-96">
+          <div className="flex flex-row gap-5 justify-around">
             <Calendar />
-          </div>
-          <div>
-            <SmallEventCard />
+            <div className="flex flex-col gap-3 justify-between">
+              <h1 className="text-xl font-semibold">Top 3 Event in the City</h1>
+              <SmallEventCard />
+              <SmallEventCard />
+              <SmallEventCard />
+            </div>
           </div>
         </Container>
       </GridLayout>

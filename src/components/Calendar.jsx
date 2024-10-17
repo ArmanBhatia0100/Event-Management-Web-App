@@ -5,7 +5,7 @@ const events = [{ title: "Meeting", start: new Date() }];
 
 export default function Calendar() {
   return (
-    <div>
+    <div className="min-w-96">
       <FullCalendar
         plugins={[dayGridPlugin]}
         initialView="dayGridMonth"
