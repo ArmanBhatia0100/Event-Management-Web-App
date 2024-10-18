@@ -39,7 +39,7 @@ const ExpandMore = styled((props) => {
   ],
 }));
 
-export default function EventCard({ imgURL }) {
+export default function EventCard({ imgURL, event }) {
   const [expanded, setExpanded] = React.useState(false);
   console.log(imgURL);
 
@@ -50,7 +50,7 @@ export default function EventCard({ imgURL }) {
   return (
     <Card
       sx={{ maxWidth: 300, minWidth: 270 }}
-      className=" cursor-pointer hover:bg-slate-200"
+      className="hover:bg-slate-200 cursor-pointer"
     >
       <CardHeader
         avatar={
@@ -63,7 +63,7 @@ export default function EventCard({ imgURL }) {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
+        title={event.eventName}
         subheader="September 14, 2016"
       />
       <CardMedia
