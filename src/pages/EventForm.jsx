@@ -1,12 +1,15 @@
-// src/components/EventForm.jsx
-
 import React, { useState, useContext } from "react";
 import { eventContext } from "../App";
 import { useNavigate, Link } from "react-router-dom";
 
+/**
+ * @returns the Event form to add the event details by the users
+ */
 const EventForm = () => {
+  // This context will bring the context function to add the events.
   const { getContextValue } = useContext(eventContext);
-  const navigate = useNavigate();
+
+  // default empty state of the form
   const [formData, setFormData] = useState({
     eventName: "",
     eventDate: "",
@@ -14,15 +17,24 @@ const EventForm = () => {
     hostName: "",
   });
 
+  // This function will navigate the page to "/" once the form is submitted.
+  const navigate = useNavigate();
+
+  //  Handles the changes to the form elemenst
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  // onSubmit handler
   const handleSubmit = (e) => {
     e.preventDefault();
+    // validForm function will check the form is valid or not.
     if (validateForm()) {
+      // getContextValue function will take the data from the user and pass it to the eventContext in the App.js
       getContextValue(formData);
+
+      // This will reset the form values.
       setFormData({
         eventName: "",
         eventDate: "",
@@ -108,7 +120,6 @@ const EventForm = () => {
           >
             Submit
           </button>
-          <Link to="/">home</Link>
         </div>
       </form>
     </div>
